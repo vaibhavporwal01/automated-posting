@@ -1,0 +1,77 @@
+{
+  "success": true,
+  "run_id": "e9055891",
+  "timezone": "Asia/Kolkata",
+  "summary": {
+    "total": 7,
+    "succeeded": 7,
+    "failed": 0,
+    "duration_ms": 6854
+  },
+  "results": [
+    {
+      "platform": "Bluesky",
+      "status": "success",
+      "posted_url": "https://bsky.app/profile/vaibhavporwal01.bsky.social/post/3n2gipth2ca22",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "17:40:57",
+      "error": null
+    },
+    {
+      "platform": "Dev.to",
+      "status": "success",
+      "posted_url": "https://dev.to/vaibhav_porwal_40fb026387/cross-posting-service-in-fastapi-one-request-publishes-this-message-4emi",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "17:40:56",
+      "error": null
+    },
+    {
+      "platform": "GitHub Gist",
+      "status": "success",
+      "posted_url": "https://gist.github.com/vaibhavporwal01/8f7744386435e51205f2e5dd8a3a75e7",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "17:40:57",
+      "error": null
+    },
+    {
+      "platform": "Hugging Face",
+      "status": "success",
+      "posted_url": "https://huggingface.co/datasets/vaibhavporwal01/automated-posting-feed/discussions/2",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "17:40:56",
+      "error": null
+    },
+    {
+      "platform": "Telegram",
+      "status": "success",
+      "posted_url": "https://t.me/dxoratest/3",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "17:40:56",
+      "error": null
+    },
+    {
+      "platform": "Telegraph",
+      "status": "success",
+      "posted_url": "https://telegra.ph/Cross-posting-service-in-FastAPI-one-request-publishes-this-message-11-16",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "17:40:56",
+      "error": null
+    },
+    {
+      "platform": "Write.as",
+      "status": "success",
+      "posted_url": "https://write.as/9qp3mohve7n9s",
+      "public_access": true,
+      "date": "2026-11-16",
+      "time": "17:40:57",
+      "error": null
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,23 @@
+2026-11-16 17:33:52 INFO    posting.api        ready platforms=Dev.to,GitHub Gist,Hugging Face,Telegram,Telegraph,Write.as skipped=none
+2026-11-16 17:34:09 INFO    posting.service    run=e79a3e81 start platforms=Dev.to,GitHub Gist,Hugging Face,Telegram,Telegraph,Write.as link=https://github.com/vaibhavporwal01/automated-posting chars=155
+2026-11-16 17:34:10 INFO    posting.platforms  platform=Telegraph created a new account; set TELEGRAPH_ACCESS_TOKEN to reuse it across restarts
+2026-11-16 17:34:10 INFO    posting.service    run=e79a3e81 platform=Dev.to status=success url=https://dev.to/vaibhav_porwal_40fb026387/built-a-fastapi-service-that-publishes-one-message-to-6-platforms-39ff public=True elapsed_ms=988
+2026-11-16 17:34:11 INFO    posting.service    run=e79a3e81 platform=Hugging Face status=success url=https://huggingface.co/datasets/vaibhavporwal01/automated-posting-feed/discussions/1 public=True elapsed_ms=1789
+2026-11-16 17:34:11 INFO    posting.service    run=e79a3e81 platform=GitHub Gist status=success url=https://gist.github.com/vaibhavporwal01/8fca91b9125610b9eb01c51b31fc3085 public=True elapsed_ms=2198
+2026-11-16 17:34:11 INFO    posting.service    run=e79a3e81 platform=Write.as status=success url=https://write.as/2b1rjx22qe5h2 public=True elapsed_ms=2287
+2026-11-16 17:34:16 INFO    posting.service    run=e79a3e81 platform=Telegram status=success url=https://t.me/dxoratest/2 public=True elapsed_ms=6475
+2026-11-16 17:34:25 INFO    posting.service    run=e79a3e81 platform=Telegraph status=success url=https://telegra.ph/Built-a-FastAPI-service-that-publishes-one-message-to-6-platforms-11-16 public=True elapsed_ms=15783
+2026-11-16 17:34:25 INFO    posting.service    run=e79a3e81 done succeeded=6 failed=0 duration_ms=15787
+2026-11-16 17:40:44 INFO    posting.api        ready platforms=Bluesky,Dev.to,GitHub Gist,Hugging Face,Telegram,Telegraph,Write.as skipped=none
+2026-11-16 17:40:55 INFO    posting.service    run=e9055891 start platforms=Bluesky,Dev.to,GitHub Gist,Hugging Face,Telegram,Telegraph,Write.as link=https://github.com/vaibhavporwal01/automated-posting chars=171
+2026-11-16 17:40:56 INFO    posting.platforms  platform=Telegraph created a new account; set TELEGRAPH_ACCESS_TOKEN to reuse it across restarts
+2026-11-16 17:40:56 INFO    posting.service    run=e9055891 platform=Dev.to status=success url=https://dev.to/vaibhav_porwal_40fb026387/cross-posting-service-in-fastapi-one-request-publishes-this-message-4emi public=True elapsed_ms=919
+2026-11-16 17:40:57 INFO    posting.service    run=e9055891 platform=Hugging Face status=success url=https://huggingface.co/datasets/vaibhavporwal01/automated-posting-feed/discussions/2 public=True elapsed_ms=1298
+2026-11-16 17:40:57 INFO    posting.service    run=e9055891 platform=Telegram status=success url=https://t.me/dxoratest/3 public=True elapsed_ms=1744
+2026-11-16 17:40:57 WARNING posting.platforms  platform=Write.as posted anonymously; Write.as unpublishes anonymous posts after about an hour. Set WRITEAS_ACCESS_TOKEN to keep posts online
+2026-11-16 17:40:58 INFO    posting.service    run=e9055891 platform=Write.as status=success url=https://write.as/9qp3mohve7n9s public=True elapsed_ms=2240
+2026-11-16 17:40:58 INFO    posting.service    run=e9055891 platform=GitHub Gist status=success url=https://gist.github.com/vaibhavporwal01/8f7744386435e51205f2e5dd8a3a75e7 public=True elapsed_ms=2514
+2026-11-16 17:40:58 INFO    posting.service    run=e9055891 platform=Bluesky status=success url=https://bsky.app/profile/vaibhavporwal01.bsky.social/post/3n2gipth2ca22 public=True elapsed_ms=2683
+2026-11-16 17:41:02 INFO    posting.service    public check for https://telegra.ph/Cross-posting-service-in-FastAPI-one-request-publishes-this-message-11-16 was inconclusive; keeping the platform's answer
+2026-11-16 17:41:02 INFO    posting.service    run=e9055891 platform=Telegraph status=success url=https://telegra.ph/Cross-posting-service-in-FastAPI-one-request-publishes-this-message-11-16 public=True elapsed_ms=6849
+2026-11-16 17:41:02 INFO    posting.service    run=e9055891 done succeeded=7 failed=0 duration_ms=6854

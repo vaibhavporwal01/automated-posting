@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Posting console</title>
+  <meta name="description" content="Publish one message to every connected platform through their APIs.">
+  <link rel="preload" href="/static/fonts/schibsted-grotesk-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/static/fonts/schibsted-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='3' width='2' height='10' fill='%2317202B'/%3E%3Crect x='5' y='3' width='2' height='10' fill='%2317202B'/%3E%3Crect x='9' y='3' width='2' height='10' fill='%231F4FE0'/%3E%3Crect x='13' y='3' width='2' height='10' fill='%23C7CED8'/%3E%3C/svg%3E">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar__inner">
+      <a class="brand" href="/" aria-label="Posting console home">
+        <span class="brand__mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        Posting console
+      </a>
+      <nav class="topbar__nav" aria-label="Developer links">
+        <span class="endpoint" title="The endpoint this page calls"><b>POST</b> /posting</span>
+        <a href="/docs">API reference</a>
+        <a href="/platforms">Platforms JSON</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="intro">
+      <h1>Publish a message to every connected platform</h1>
+      <p>Up to 200 characters with exactly one link. The server checks the message, then posts it to each platform whose API credentials are set and reports back on every one.</p>
+    </section>
+
+    <section class="workspace">
+      <form class="composer" id="composer" novalidate>
+        <div class="composer__head">
+          <label for="message">Message</label>
+          <button type="button" class="textlink" id="use-example">Use the example from the brief</button>
+        </div>
+
+        <textarea id="message" name="message" rows="4" spellcheck="true"
+          placeholder="Write your update and include one link, for example https://yourcompany.com"
+          aria-describedby="counter checks"></textarea>
+
+        <div class="ruler" id="ruler" aria-hidden="true"></div>
+        <div class="ruler__scale" aria-hidden="true">
+          <span>0</span><span>50</span><span>100</span><span>150</span><span>200</span>
+        </div>
+
+        <div class="meter">
+          <p class="counter" id="counter" aria-live="polite"><strong>0</strong> of 200 characters</p>
+          <p class="detected" id="detected">No link yet</p>
+        </div>
+
+        <ul class="checks" id="checks">
+          <li data-check="length">Within 200 characters</li>
+          <li data-check="one-link">Exactly one link</li>
+          <li data-check="valid-url">Link is a public http or https address</li>
+        </ul>
+
+        <p class="form-error" id="form-error" role="alert" hidden></p>
+
+        <div class="composer__actions">
+          <button type="submit" class="primary" id="publish">Publish</button>
+          <span class="hint"><kbd id="kbd-mod">Ctrl</kbd> + <kbd>Enter</kbd> also publishes</span>
+        </div>
+      </form>
+
+      <aside class="destinations" aria-labelledby="destinations-title">
+        <h2 id="destinations-title">Destinations</h2>
+        <p class="destinations__note" id="destinations-note">Checking which platforms have credentials…</p>
+        <ol class="destinations__list" id="destinations"></ol>
+      </aside>
+    </section>
+
+    <section class="results" aria-labelledby="results-title">
+      <div class="results__head">
+        <h2 id="results-title">Results</h2>
+        <p class="results__summary" id="summary">Each platform's outcome appears here after you publish.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="results__table">
+          <thead>
+            <tr>
+              <th scope="col">Platform</th>
+              <th scope="col">Status</th>
+              <th scope="col">Posted URL</th>
+              <th scope="col">Public</th>
+              <th scope="col">Date</th>
+              <th scope="col">Time</th>
+              <th scope="col">Error</th>
+            </tr>
+          </thead>
+          <tbody id="results-body">
+            <tr class="empty"><td colspan="7">Nothing published yet. Write a message above and press Publish.</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <details class="raw" id="raw" hidden>
+        <summary>Raw JSON response</summary>
+        <pre id="raw-json"></pre>
+      </details>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>FastAPI service on port 4000. Interactive API docs at <a href="/docs">/docs</a>.</p>
+  </footer>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>

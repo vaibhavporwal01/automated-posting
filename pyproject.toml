@@ -1,0 +1,15 @@
+[project]
+name = "automated-posting"
+version = "1.0.0"
+description = "FastAPI service that publishes one message to several platforms through their APIs."
+requires-python = ">=3.9"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+    "ignore:Using .httpx. with",
+]
